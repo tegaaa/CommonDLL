@@ -11,5 +11,5 @@ jobs:
       uses: warrenbuckley/Setup-MSBuild@v1
 
     - name: MSBuild
-      working-directory: src/CommonDLL/CalcLib/CalcLib
+      working-directory: src/CalcLib/CalcLib
       run: msbuild CalcLib.csproj
