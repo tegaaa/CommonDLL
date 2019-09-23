@@ -13,9 +13,8 @@ jobs:
     - name: MSBuild
       working-directory: CalcLib/CalcLib
       run: msbuild CalcLib.csproj
-    - name: Upload artifacts
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: publish artifacts
+      uses: actions/upload-artifact@master
       with:
-        args: 'Common-DLL-*'
+        name: drop
+        path: D:\a\CommonDLL\CommonDLL\CalcLib\CalcLib\bin\Debug
